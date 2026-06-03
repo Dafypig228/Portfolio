@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Adil Abdildenov — Portfolio</title>
+<meta name="description" content="Adil Abdildenov — Creative Developer and Lead Programmer." />
+<style>
+  :root { color-scheme: light dark; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { height: 100%; background: #000; }
+  
+  /* ---- CRT Canvas ---- */
+  #gl {
+    position: fixed; inset: 0; width: 100%; height: 100%;
+    display: block; z-index: 10;
+    opacity: 0; pointer-events: none;
+    transition: opacity .35s ease;
+    background: #000;
+  }
+  #gl.live { opacity: 1; pointer-events: auto; }
+  body.crt-on { overflow: hidden; }
+  
+  /* ---- Clean ATS Resume Fallback (Like the photos) ---- */
+  body:not(.crt-on) { overflow: auto; background: #f4f4f4; }
+  
+  .fb {
+    position: relative; z-index: 1;
+    max-width: 850px; margin: 40px auto; padding: 40px 50px;
+    color: #111; background: #fff;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    min-height: 100%;
+    line-height: 1.5;
+  }
+  
+  .fb header { margin-bottom: 25px; border-bottom: 2px solid #ccc; padding-bottom: 15px; }
+  .fb h1 { font-size: 28pt; margin: 0 0 5px 0; text-transform: uppercase; font-weight: 700; letter-spacing: 1px; color: #000; }
+  .fb .subtitle { font-size: 12pt; font-weight: bold; margin-bottom: 5px; }
+  .fb .contact-info { font-size: 10pt; color: #555; }
+  .fb .contact-info a { color: #0066cc; text-decoration: none; }
+  .fb .contact-info a:hover { text-decoration: underline; }
+  .fb .contact-info span { margin-right: 8px; }
+  
+  .fb .section { margin-bottom: 20px; }
+  .fb .section-title { font-size: 14pt; color: #333; font-weight: bold; border-bottom: 1px solid #ccc; margin-top: 25px; margin-bottom: 12px; padding-bottom: 3px; text-transform: uppercase; }
+  
+  .fb .item-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 2px; }
+  .fb .item-title { font-weight: bold; font-size: 11.5pt; color: #000; }
+  .fb .item-date, .fb .item-location { color: #555; font-size: 10pt; text-align: right; }
+  .fb .item-subtitle { display: flex; justify-content: space-between; font-size: 10.5pt; font-style: normal; margin-bottom: 6px; color: #333; }
+  
+  .fb ul { margin: 0 0 15px 0; padding-left: 20px; }
+  .fb li { margin-bottom: 4px; font-size: 10.5pt; color: #222; }
+  
+  .fb .skills-grid { display: grid; grid-template-columns: 110px 1fr; gap: 8px 10px; font-size: 10.5pt; }
+  .fb .skill-cat { font-weight: bold; color: #000; }
+</style>
+</head>
+<body>
+<main class="fb">
+  <header>
+    <h1>ADIL ABDILDENOV</h1>
+    <div class="subtitle">Creative Developer & Lead Programmer</div>
+    <div class="contact-info">
+      <span>Astana, Kazakhstan</span> |
+      <span><a href="mailto:adil.abdilden2010@gmail.com">adil.abdilden2010@gmail.com</a></span> |
+      <span><a href="https://t.me/eexactly_f" target="_blank">Telegram: @eexactly_f</a></span> |
+      <span><a href="https://github.com/Dafypig228" target="_blank">GitHub</a></span> |
+      <span><a href="https://www.instagram.com/eexactly_f/" target="_blank">Instagram</a></span>
+      <span><a href="https://t.me/Forthosv" target="_blank">Telegram</a></span>
+    </div>
+  </header>
+
+  <div class="section">
+    <div class="section-title">Education</div>
+    <div class="item-header">
+      <div class="item-title">High School (A-Level Curriculum)</div>
+      <div class="item-date">Expected 2027</div>
+    </div>
+    <div class="item-subtitle">
+      <div>Computer Science & STEM Track</div>
+      <div class="item-location">Astana, Kazakhstan</div>
+    </div>
+    <ul>
+      <li>Focus on Advanced Computer Science, Robotics, and Machine Learning.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Skills</div>
+    <div class="skills-grid">
+      <div class="skill-cat">Languages:</div>
+      <div>C++, C#, Java, Python, SQL</div>
+      <div class="skill-cat">Technologies:</div>
+      <div>Node.js, TensorFlow, PyTorch, OpenCV, Unity, Unreal, .NET, PedroPathing, RoadRunner</div>
+      <div class="skill-cat">Tools:</div>
+      <div>Git, Linux, Docker, Google Cloud Platform, Firebase, Blender, WebStorm</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Projects & Experience</div>
+
+    <div class="item-header">
+      <div class="item-title">FIRST Tech Challenge (Team xCeption)</div>
+      <div class="item-date">2025 – 2026</div>
+    </div>
+    <div class="item-subtitle">
+      <div>Lead Programmer</div>
+      <div class="item-location">Astana / Houston, TX</div>
+    </div>
+    <ul>
+      <li>Led a 15-person cross-school robotics team as the lead programmer.</li>
+      <li>Developed advanced autonomous navigation systems utilizing custom PID controllers, 3-wheel odometry, and OpenCV vision pipelines.</li>
+      <li>Represented Kazakhstan at the FTC World Championship in Houston, securing the 3rd Place Think Award.</li>
+    </ul>
+
+    <div class="item-header">
+      <div class="item-title">DAVOS - AI Companion</div>
+      <div class="item-date">2026</div>
+    </div>
+    <div class="item-subtitle">
+      <div>Lead Developer</div>
+    </div>
+    <ul>
+      <li>Prioritized the development of a personalized digital companion and friend over standard background automation tools.</li>
+      <li>Engineered a local memory architecture integrating ONNX vector embeddings and entity pivots for context retention.</li>
+      <li>Built an autonomous monologue loop fueled by system telemetry and computer vision screen monitoring.</li>
+    </ul>
+
+    <div class="item-header">
+      <div class="item-title">B.R.E.D</div>
+      <div class="item-date">2026</div>
+    </div>
+    <div class="item-subtitle">
+      <div>C++, Godot Developer</div>
+    </div>
+    <ul>
+      <li>Programmed full world renders relying on text processing instead of standard ASCII.</li>
+      <li>Designed core mechanics and rendering systems intended for a horror game environment.</li>
+      <li>Preview available at: <a href="https://www.youtube.com/watch?v=MEZYe6K1hnI" target="_blank">YouTube Link</a></li>
+    </ul>
+  </div>
+</main>
+<canvas id="gl"></canvas>
+<script>
+"use strict";
+
+const CONFIG = {
+  curvature:    2.40,   
+  frame:        1.13,   
+  aberration:   0.025,  
+  grain:        0.240,  
+  maskStrength: 2.72,   
+  
+  // ==========================================
+  // ГРУППА 1: CRT
+  // ==========================================
+  maskCell:     4.5,    
+  scanDepth:    0.88,   
+  gain:         1.48,   
+  
+  // ==========================================
+  // ГРУППА 2: RELIEF (UI)
+  // ==========================================
+  smallTextRelief:  1.0,   // 1.0 = включить мод
+  reliefMaskCell:   5.5,  
+  reliefScanDepth:  0.68, 
+  reliefGain:       1.0,  
+  reliefDesat:      0.0,  
+  
+  
+  debugRelief:      false, 
+  
+  // ----- ASCII MARK -----
+  asciiSize:        18,    
+  asciiHoverRadius: 25,   
+  asciiScrambleHz:  10,    
+  asciiHoverHold:   500,   
+  asciiRollMin:     2000,  
+  asciiRollMax:     5000,  
+  // ----- BG LOGO -----
+  bgLogoEnabled:    false,
+  bgLogoSize:       18,    
+  bgLogoColor:      "#c41e3a",  
+  bgLogoWeight:     900,   
+  bgLogoOffsetX:    0,     
+  bgLogoOffsetY:    0,     
+  bootMs:       1650,
+  transMs:      1200,
+  
+  paper:  "#d7d3c4",   
+  ink:    "#16140d",     
+  dim:    "#1a1710",     
+  accent: "#a82e0a",    
+  rule:   "#8f8975",  
+};
+
+const ASCII_FORTHOSV = [
+  "MMMMMMMM  MMMMMM  MMMMMMM  MMMMMMMM MM    MM  MMMMMM   MMMMMM  MM    MM",
+  "MM       MM    MM MM    MM    MM    MM    MM MM    MM MM       MM    MM",
+  "MM       MM    MM MM    MM    MM    MM    MM MM    MM MM       MM    MM",
+  "MMMMMM   MM    MM MMMMMMM     MM    MMMMMMMM MM    MM  MMMMMM  MM    MM",
+  "MM       MM    MM MM  MM      MM    MM    MM MM    MM       MM  MM  MM ",
+  "MM       MM    MM MM   MM     MM    MM    MM MM    MM       MM   MMMM  ",
+  "MM        MMMMMM  MM    MM    MM    MM    MM  MMMMMM   MMMMMM     MM   ",
+];
+
+const SCRAMBLE_CHARS = "!@#$%&*+=<>?/\\|{}[]()~^_-:;.,01234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+const ASCII_BG_LOGO = [
+  "\\                                    /", " \\                                  / ", "  \\                                /  ", "   \\                              /   ", "    \\                            /    ", "     \\                          /     ", "      \\                        /      ", "       \\                      /       ", "        \\                    /        ", "         \\                  /         ", "          \\                /          ", "           \\              /           ", "            \\            /            ", "             \\          /             ", "              \\        /              ", "               \\      /               ", "                \\    /                ", "                 \\  /                 ", "                  \\/                  ", "                  /\\                  ", "                 /  \\                 ", "                /    \\                ", "               /      \\               ", "              /        \\              ", "             /          \\             ", "            /            \\            ", "           /              \\           ", "          /                \\          ", "         /                  \\         ", "        /                    \\        ", "       /                      \\       ", "      /                        \\      ", "     /                          \\     ", "    /                            \\    ", "   /                              \\   ", "  /                                \\  ", " /                                  \\ ", "/                                    \\"
+];
+
+const NAV = ["HOME", "PROJECTS", "ABOUT", "CONTACT"];
+const PAGES = {
+  HOME: { align: "center", blocks: [
+    { t: "ascii", lines: ASCII_FORTHOSV, mode: "crt" },
+    { t: "sub",  s: "CREATIVE  DEVELOPER", mode: "relief" },
+    { t: "rule", mode: "crt" },
+    { t: "sub",  s: "ROBOTIC · COOL STUFF · COMPUTER SCIENCE", mode: "relief" },
+    { t: "space", h: 28 },
+    { t: "tiny", s: "{ ABDILDENOV ADIL }", mode: "relief" },
+  ]},
+  PROJECTS: {
+    align: "left",
+    blocks: [
+      { t: "h", s: "// PROJECTS", mode: "crt" },
+      { t: "space", h: 16 },
+      { t: "projShow", mode: "relief" },
+    ],
+    projects: [
+      { n: "FIRST TECH CHALLENGE", tech: "JAVA · ROBOTICS · INTERNATIONAL", d: "25 — 26", b: ["Led 15-person cross-school team of top-tier school's students", "Advanced Autonomous Navigation: Custom PID control, 3-wheel odometry, RoadRunner/PedroPathing", "3rd Place Think Award on FTC World Championship in Houston"] },
+      { n: "B.R.E.D", tech: "C++ · GAMEDEV · GODOT", d: "2026", b: ["Full world renders with text(not ASCII)", "Would make a horror game", "Preview: https://www.youtube.com/watch?v=MEZYe6K1hnI"] },
+      { n: "DAVOS", tech: "C++ · AUDIO API · MULTI-LAYER AGENTIC SYSTEM · WPF C# DESKTOP", d: "2026", b: ["6-layer local memory architecture integrating ONNX vector embeddings and GraphRAG entity pivots", "Autonomous drive-based monologue loop fueled by system telemetry and privacy-filtered passive sensors", "30-step JarvisCore execution engine supporting UI automation and multi-agent code self-modification"] },
+    ],
+  },
+  ABOUT: { align: "left", blocks: [
+    { t: "h", s: "// EDUCATION", mode: "crt" },
+    { t: "space", h: 12 },
+    { t: "edu", mode: "relief", s: "HIGH SCHOOL · 10 GRADE", d: "2016 — 2027", deg: "Computer Science · ML/AI", focus: "Robotics · Machine Learning · Cool Stuff" },
+    { t: "space", h: 26 },
+    { t: "h", s: "// SKILLS", mode: "crt" },
+    { t: "space", h: 12 },
+    { t: "skills", mode: "relief", cat: "LANGUAGES", items: "    C++ · C# · JAVA · PYTHON · SQL" },
+    { t: "skills", mode: "relief", cat: "TECHNOLOGIES", items: "    NODE.JS · BASH · TENSORFLOW · PANDAS · PYTORCH" },
+    { t: "skills", mode: "relief", cat: "            ", items: "    GIT · LINUX · DOCKER · BLENDER · CLAUDE CODE" },
+  ]},
+  CONTACT: { align: "left", blocks: [
+    { t: "h", s: "// CONTACT", mode: "crt" },
+    { t: "space", h: 15 },
+    { t: "kv", mode: "relief", k: "EMAIL", v: "   adil.abdilden2010@gmail.com", href: "https://mailto:adil.abdilden2010@gmail.com" },
+    { t: "kv", mode: "relief", k: "GITHUB", v: "   github.com/Dafypig228", href: "https://github.com/Dafypig228" },
+    { t: "kv", mode: "relief", k: "INSTAGRAM", v: "   @eexactly_f", href: "https://www.instagram.com/eexactly_f/" },
+    { t: "kv", mode: "relief", k: "TELEGRAM", v: "   @Forthosv", href: "https://t.me/Forthosv" },
+    { t: "space", h: 22 },
+    { t: "tiny", mode: "relief", s: "READY FOR ANYYY (ANYYYY!!!) OPPORTUNITY" },
+  ]},
+};
+
+const CURVE = CONFIG.curvature;
+const FRAME = CONFIG.frame;
+const gl_canvas = document.getElementById("gl");
+const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+let gl = null;
+try { if (!reduced) gl = gl_canvas.getContext("webgl", { antialias: false, alpha: false }); }
+catch (e) { gl = null; }
+
+if (!gl) document.body.classList.remove("crt-on");
+else startCRT(gl);
+
+function startCRT(gl) {
+  document.body.classList.add("crt-on");
+
+  let W = 0, H = 0, dpr = 1;
+  const page = document.createElement("canvas");
+  const pctx = page.getContext("2d");
+
+  const page2 = document.createElement("canvas");
+  const pctx2 = page2.getContext("2d");
+
+  const origFillText = pctx.fillText.bind(pctx);
+  pctx.fillText = function(text, x, y) {
+    origFillText(text, x, y); 
+    if (pctx._crtMode === "relief") {
+      pctx2.font = pctx.font;
+      pctx2.fillStyle = pctx.fillStyle;
+      pctx2.textAlign = pctx.textAlign;
+      pctx2.textBaseline = pctx.textBaseline;
+      try { pctx2.letterSpacing = pctx.letterSpacing; } catch (e) {}
+      pctx2.fillText(text, x, y); 
+    }
+  };
+
+  const origFillRect = pctx.fillRect.bind(pctx);
+  pctx.fillRect = function(x, y, w, h) {
+    origFillRect(x, y, w, h);
+    if (pctx._crtMode === "relief" && pctx.fillStyle !== CONFIG.paper) {
+      pctx2.fillStyle = pctx.fillStyle;
+      pctx2.fillRect(x, y, w, h);
+    }
+  };
+
+  pctx._crtMode = "crt";
+
+  const VERT = `
+    attribute vec2 p; varying vec2 vUv;
+    void main(){ vUv = p*0.5+0.5; gl_Position = vec4(p,0.0,1.0); }`;
+
+  const FRAG = `
+    precision highp float;
+    varying vec2 vUv;
+    uniform sampler2D uTex;
+    uniform sampler2D uTex2; 
+    uniform vec2  uRes;
+    uniform float uTime;
+    uniform float uNoise;
+    uniform float uPower;
+
+    float hash(vec2 p){
+      p = fract(p*vec2(123.34,456.21));
+      p += dot(p,p+45.32);
+      return fract(p.x*p.y);
+    }
+    
+    vec2 curve(vec2 uv){
+      uv = uv*2.0-1.0;
+      vec2 o = abs(uv.yx)/vec2(${CURVE.toFixed(3)}*1.6, ${CURVE.toFixed(3)}*1.4);
+      uv += uv*o*o;
+      return uv*0.5+0.5;
+    }
+
+    void main(){
+      vec2 uv = (vUv-0.5)*${CONFIG.frame} + 0.5;
+      uv.x += sin(uTime*2.0 + uv.y*9.0)*0.0008;
+      uv = curve(uv);
+
+      float open = smoothstep(0.0,1.0,uPower);
+      float vis  = step(abs(uv.y-0.5), open*0.5+0.002);
+
+      vec2 ed = smoothstep(vec2(0.0),vec2(0.010),uv)
+              * smoothstep(vec2(0.0),vec2(0.010),1.0-uv);
+      float inside = ed.x*ed.y;
+
+      float relief = texture2D(uTex2, uv).a * ${CONFIG.smallTextRelief.toFixed(3)};
+      vec3 sharpProbe = texture2D(uTex, uv).rgb;
+
+      float targetHeight = 270.0;
+      float targetWidth = targetHeight * (uRes.x / uRes.y);
+      vec2 retroRes = vec2(targetWidth, targetHeight);
+      vec2 pixelatedUV = floor(uv * retroRes) / retroRes;
+
+      float onePixelX = 1.0 / targetWidth;
+      vec3 col = vec3(0.0);
+      col += texture2D(uTex, pixelatedUV + vec2(-2.0 * onePixelX, 0.0)).rgb * 0.10;
+      col += texture2D(uTex, pixelatedUV + vec2(-1.0 * onePixelX, 0.0)).rgb * 0.24;
+      col += texture2D(uTex, pixelatedUV + vec2( 0.0 * onePixelX, 0.0)).rgb * 0.32;
+      col += texture2D(uTex, pixelatedUV + vec2( 1.0 * onePixelX, 0.0)).rgb * 0.24;
+      col += texture2D(uTex, pixelatedUV + vec2( 2.0 * onePixelX, 0.0)).rgb * 0.10;
+
+      col = mix(col, sharpProbe, relief);
+
+      vec2 c = uv-0.5;
+      float d = dot(c,c);
+      float ab = 0.0007 + d * ${CONFIG.aberration.toFixed(4)};
+      float abAmt = 0.5 * (1.0 - relief); 
+      col.r = mix(col.r, texture2D(uTex, pixelatedUV + vec2(ab, 0.0)).r, abAmt);
+      col.b = mix(col.b, texture2D(uTex, pixelatedUV - vec2(ab, 0.0)).b, abAmt);
+
+      float scanlineWave = sin(uv.y * targetHeight * 2.0 * 3.14159265) * 0.5 + 0.5;
+      scanlineWave = scanlineWave * scanlineWave;
+      float scanDepthEff = mix(${CONFIG.scanDepth.toFixed(3)}, ${CONFIG.reliefScanDepth.toFixed(3)}, relief);
+      float scanline = mix(1.0, scanlineWave, scanDepthEff);
+
+      float coarseCell = ${CONFIG.maskCell.toFixed(3)};
+      float fineCell   = max(0.05, ${CONFIG.reliefMaskCell.toFixed(3)});
+
+      float x_mod_c = mod(gl_FragCoord.x / coarseCell, 3.0);
+      vec3 phosphor_c = x_mod_c < 1.0 ? vec3(1.0, ${CONFIG.maskStrength.toFixed(3)}, ${CONFIG.maskStrength.toFixed(3)})
+                      : x_mod_c < 2.0 ? vec3(${CONFIG.maskStrength.toFixed(3)}, 1.0, ${CONFIG.maskStrength.toFixed(3)})
+                      :                 vec3(${CONFIG.maskStrength.toFixed(3)}, ${CONFIG.maskStrength.toFixed(3)}, 1.0);
+      float col_idx_c = floor(gl_FragCoord.x / coarseCell);
+      float y_off_c   = mod(col_idx_c, 2.0) * coarseCell;
+      float slot_y_c  = mod(gl_FragCoord.y + y_off_c, coarseCell * 2.0);
+      float slot_c    = (slot_y_c < coarseCell) ? 0.62 : 1.0;
+      vec3 mask_geo_c = phosphor_c * slot_c;
+
+      float x_mod_f = mod(gl_FragCoord.x / fineCell, 3.0);
+      vec3 phosphor_f = x_mod_f < 1.0 ? vec3(1.0, ${CONFIG.maskStrength.toFixed(3)}, ${CONFIG.maskStrength.toFixed(3)})
+                      : x_mod_f < 2.0 ? vec3(${CONFIG.maskStrength.toFixed(3)}, 1.0, ${CONFIG.maskStrength.toFixed(3)})
+                      :                 vec3(${CONFIG.maskStrength.toFixed(3)}, ${CONFIG.maskStrength.toFixed(3)}, 1.0);
+      float col_idx_f = floor(gl_FragCoord.x / fineCell);
+      float y_off_f   = mod(col_idx_f, 2.0) * fineCell;
+      float slot_y_f  = mod(gl_FragCoord.y + y_off_f, fineCell * 2.0);
+      float slot_f    = (slot_y_f < fineCell) ? 0.62 : 1.0;
+      vec3 mask_geo_f = phosphor_f * slot_f;
+
+      vec3 mask_geo = mix(mask_geo_c, mask_geo_f, relief);
+      vec3 crt_grid = mask_geo * scanline;
+
+      float luma = dot(col, vec3(0.2126, 0.7152, 0.0722));
+      float maskWashout = smoothstep(0.15, 0.85, luma) * 0.65;
+      crt_grid = mix(crt_grid, vec3(1.0), maskWashout);
+
+      float grayMask = dot(crt_grid, vec3(0.299, 0.587, 0.114));
+      crt_grid = mix(crt_grid, vec3(grayMask), relief * ${CONFIG.reliefDesat.toFixed(3)});
+
+      col *= crt_grid;
+
+      float gainEff = mix(${CONFIG.gain.toFixed(3)}, ${CONFIG.reliefGain.toFixed(3)}, relief);
+      col *= gainEff;
+
+      float t = mod(floor(uTime*24.0),900.0);
+      col += (hash(uv*uRes + t)-0.5)*${CONFIG.grain.toFixed(3)};
+
+      float ns = hash(uv*uRes*0.5 + t*1.7);
+      col = mix(col, vec3(ns), clamp(uNoise,0.0,1.0));
+
+      col *= 1.0 + sin(uTime*48.0)*0.012 + sin(uTime*7.3)*0.008;
+      col *= 1.0 - d*0.85;
+
+      vec3 bezel = vec3(0.045,0.043,0.038);
+      col = mix(bezel, col*vis, inside);
+
+      ${CONFIG.debugRelief ? `col = mix(col, vec3(1.0, 0.0, 0.0), relief * 0.8);` : ``}
+
+      gl_FragColor = vec4(col,1.0);
+    }`;
+
+  function shader(type, src) {
+    const s = gl.createShader(type);
+    gl.shaderSource(s, src); gl.compileShader(s);
+    if (!gl.getShaderParameter(s, gl.COMPILE_STATUS))
+      throw new Error(gl.getShaderInfoLog(s));
+    return s;
+  }
+  const prog = gl.createProgram();
+  gl.attachShader(prog, shader(gl.VERTEX_SHADER, VERT));
+  gl.attachShader(prog, shader(gl.FRAGMENT_SHADER, FRAG));
+  gl.linkProgram(prog);
+  if (!gl.getProgramParameter(prog, gl.LINK_STATUS))
+    throw new Error(gl.getProgramInfoLog(prog));
+  gl.useProgram(prog);
+
+  const buf = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1, 1,-1, -1,1, 1,1]), gl.STATIC_DRAW);
+  const loc = gl.getAttribLocation(prog, "p");
+  gl.enableVertexAttribArray(loc);
+  gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
+
+  gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, true);
+
+  const tex = gl.createTexture();
+  gl.activeTexture(gl.TEXTURE0);
+  gl.bindTexture(gl.TEXTURE_2D, tex);
+  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
+  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
+  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
+  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+
+  const tex2 = gl.createTexture();
+  gl.activeTexture(gl.TEXTURE1);
+  gl.bindTexture(gl.TEXTURE_2D, tex2);
+  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
+  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
+  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
+  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+
+  const U = {
+    tex:   gl.getUniformLocation(prog, "uTex"),
+    tex2:  gl.getUniformLocation(prog, "uTex2"),
+    res:   gl.getUniformLocation(prog, "uRes"),
+    time:  gl.getUniformLocation(prog, "uTime"),
+    noise: gl.getUniformLocation(prog, "uNoise"),
+    power: gl.getUniformLocation(prog, "uPower"),
+  };
+  gl.uniform1i(U.tex,  0);
+  gl.uniform1i(U.tex2, 1);
+
+  let hot = [];
+
+  function wrap(text, maxW) {
+    const words = text.split(" "); const lines = []; let line = "";
+    for (const w of words) {
+      const test = line ? line + " " + w : w;
+      if (pctx.measureText(test).width > maxW && line) { lines.push(line); line = w; }
+      else line = test;
+    }
+    if (line) lines.push(line);
+    return lines;
+  }
+  function space(px) { try { pctx.letterSpacing = px + "px"; } catch (e) {} }
+
+  function renderPage(name) {
+    hot = [];
+    const k = Math.max(0.55, Math.min(1.5, Math.min(W, H) / 900));
+    
+    pctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    pctx.fillStyle = CONFIG.paper;
+    pctx.fillRect(0, 0, W, H);
+    pctx.textBaseline = "alphabetic";
+
+    pctx2.setTransform(dpr, 0, 0, dpr, 0, 0);
+    pctx2.clearRect(0, 0, W, H);
+
+    if (CONFIG.bgLogoEnabled) {
+      const bgcs = CONFIG.bgLogoSize * k;
+      pctx.font = `${CONFIG.bgLogoWeight} ${bgcs}px ui-monospace, "Cascadia Mono", "JetBrains Mono", monospace`;
+      pctx.textBaseline = "top";
+      pctx.textAlign = "left";
+      space(0);
+      const bgCharW = pctx.measureText("M").width;
+      const bgLh = bgcs * 1.0;
+      const bgMaxLen = ASCII_BG_LOGO.reduce((m, l) => Math.max(m, l.length), 0);
+      const bgTotalW = bgMaxLen * bgCharW;
+      const bgTotalH = ASCII_BG_LOGO.length * bgLh;
+      const bgSx = (W - bgTotalW) / 2 + W * CONFIG.bgLogoOffsetX;
+      const bgSy = (H - bgTotalH) / 2 + H * CONFIG.bgLogoOffsetY;
+      pctx.fillStyle = CONFIG.bgLogoColor;
+      for (let i = 0; i < ASCII_BG_LOGO.length; i++) {
+        pctx.fillText(ASCII_BG_LOGO[i], bgSx, bgSy + i * bgLh);
+      }
+      pctx.textBaseline = "alphabetic";
+    }
+
+    pctx._crtMode = "relief";
+    pctx.fillStyle = CONFIG.dim;
+    pctx.font = `600 ${22 * k}px monospace`; 
+    pctx.textAlign = "left"; space(2 * k);
+    pctx.fillText("LeFORTHOSV", W * 0.06, H * 0.085);
+    
+    pctx.textAlign = "right";
+    pctx.font = `600 ${22 * k}px monospace`; 
+    pctx.fillStyle = CONFIG.accent;
+    pctx.fillText("▶ ON AIR", W * 0.94, H * 0.085);
+
+    const P = PAGES[name], align = P.align;
+    const sz = { mark: 132*k, sub: 22*k, h: 32*k, p: 22*k, item: 24*k,
+                 kv: 22*k, tiny: 22*k,
+                 projN: 22*k, projMeta: 22*k, bullet: 22*k,
+                 eduS: 22*k, eduDeg: 22*k, eduFocus: 22*k,
+                 skillC: 22*k, skillI: 22*k };
+                 
+    const lh = { p: 34*k, item: 60*k, kv: 44*k, bullet: 32*k, skill: 36*k };
+    const innerW = Math.min(W * 0.74, 760 * k);
+    let total = 0;
+
+    const measured = P.blocks.map(b => {
+      let h = 0;
+      if (b.t === "mark")  h = sz.mark;
+      else if (b.t === "ascii") {
+        const cs = CONFIG.asciiSize * k;
+        h = b.lines.length * cs * 1.05 + 30 * k;
+      }
+      else if (b.t === "sub")  h = sz.sub + 12*k;
+      else if (b.t === "h")    h = sz.h;
+      else if (b.t === "tiny") h = sz.tiny;
+      else if (b.t === "rule") h = 22*k;
+      else if (b.t === "space") h = b.h * k;
+      else if (b.t === "item") h = lh.item;
+      else if (b.t === "kv")   h = lh.kv;
+      else if (b.t === "p") {
+        pctx.font = `400 ${sz.p}px monospace`; space(0.5*k);
+        b._lines = wrap(b.s, innerW);
+        h = b._lines.length * lh.p;
+      }
+      else if (b.t === "proj") {
+        h = sz.projN + 6*k + sz.projMeta + 10*k + (b.b ? b.b.length * lh.bullet : 0) + 18*k;
+      }
+      else if (b.t === "edu") {
+        h = sz.eduS + 6*k + sz.eduDeg + 6*k + sz.eduFocus + 4*k;
+      }
+      else if (b.t === "skills") h = lh.skill;
+      else if (b.t === "bullet") h = lh.bullet;
+      else if (b.t === "projShow") {
+        const proj = (P.projects && P.projects[projectIndex]) || (P.projects && P.projects[0]);
+        const bulletCount = proj && proj.b ? proj.b.length : 0;
+        h = 56*k + 32*k + 14*k + 32*k + 10*k + bulletCount * 60*k + 90*k;
+      }
+      total += h;
+      return h;
+    });
+
+    let y = Math.max(H * 0.24, (H - total) / 2) + 40*k;
+    const cx = W / 2;
+    const lx = align === "center" ? cx : (W - innerW) / 2;
+
+    asciiActive = false;
+
+    P.blocks.forEach((b, i) => {
+      const h = measured[i];
+      pctx._crtMode = b.mode || "crt";
+
+      if (b.t === "mark") {
+        pctx.textAlign = "center";
+        pctx.font = `900 ${sz.mark}px monospace`; space(14*k);
+        pctx.fillStyle = CONFIG.ink;
+        pctx.fillText(b.s, cx + 7*k, y + sz.mark*0.8);
+      } else if (b.t === "ascii") {
+        if (!asciiCells) buildAsciiCells();
+        const cs = CONFIG.asciiSize * k;
+        pctx.textAlign = "left";
+        pctx.textBaseline = "alphabetic";
+        pctx.font = `700 ${cs}px ui-monospace, "Cascadia Mono", "JetBrains Mono", Menlo, Consolas, monospace`;
+        space(0);
+        const charW = pctx.measureText("M").width;
+        const maxLen = b.lines.reduce((m, l) => Math.max(m, l.length), 0);
+        const totalW = maxLen * charW;
+        const startX = cx - totalW / 2;
+        const now = performance.now();
+        const radius = CONFIG.asciiHoverRadius;
+        const radiusSq = radius * radius;
+
+        for (const cell of asciiCells) {
+          const lineY = y + (cell.row + 1) * cs * 1.05;
+          const charX = startX + cell.col * charW;
+          const gx = charX + charW * 0.5;
+          const gy = lineY - cs * 0.35;
+          const dx = gx - mouseX;
+          const dy = gy - mouseY;
+          const distSq = dx * dx + dy * dy;
+          const inRadius = mouseInside && distSq < radiusSq;
+
+          if (inRadius) {
+            if (now > cell.hotUntil) {
+              cell.ch = randScrambleChar();
+            }
+            cell.hotUntil = now + CONFIG.asciiHoverHold;
+            pctx.fillStyle = CONFIG.accent;
+            pctx.fillText(cell.ch, charX, lineY);
+            asciiActive = true;
+          } else if (now < cell.hotUntil) {
+            pctx.fillStyle = CONFIG.accent;
+            pctx.fillText(cell.ch, charX, lineY);
+            asciiActive = true;
+          } else {
+            if (now >= cell.rollAt) {
+              cell.ch = randScrambleChar();
+              cell.rollAt = now + CONFIG.asciiRollMin + Math.random() * (CONFIG.asciiRollMax - CONFIG.asciiRollMin);
+            }
+            pctx.fillStyle = CONFIG.ink;
+            pctx.fillText(cell.ch, charX, lineY);
+          }
+        }
+      } else if (b.t === "sub") {
+        pctx.textAlign = align === "center" ? "center" : "left";
+        pctx.font = `500 ${sz.sub}px monospace`; space(4*k);
+        pctx.fillStyle = CONFIG.dim;
+        pctx.fillText(b.s, align === "center" ? cx : lx, y + sz.sub);
+      } else if (b.t === "tiny") {
+        pctx.textAlign = align === "center" ? "center" : "left";
+        pctx.font = `500 ${sz.tiny}px monospace`; space(3*k);
+        pctx.fillStyle = CONFIG.dim;
+        pctx.fillText(b.s, align === "center" ? cx : lx, y + sz.tiny);
+      } else if (b.t === "h") {
+        pctx.textAlign = "left";
+        pctx.font = `700 ${sz.h}px monospace`; space(5*k);
+        pctx.fillStyle = CONFIG.accent;
+        pctx.fillText(b.s, lx, y + sz.h*0.85);
+      } else if (b.t === "rule") {
+        pctx.strokeStyle = CONFIG.rule; pctx.lineWidth = 1.5;
+        pctx.beginPath();
+        const rw = align === "center" ? 220*k : innerW;
+        pctx.moveTo(align === "center" ? cx - rw/2 : lx, y + 10*k);
+        pctx.lineTo(align === "center" ? cx + rw/2 : lx + rw, y + 10*k);
+        pctx.stroke();
+      } else if (b.t === "p") {
+        pctx.textAlign = "left";
+        pctx.font = `400 ${sz.p}px monospace`; space(0.5*k);
+        pctx.fillStyle = CONFIG.ink;
+        b._lines.forEach((ln, j) => pctx.fillText(ln, lx, y + sz.p + j*lh.p));
+      } else if (b.t === "item") {
+        pctx.textAlign = "left";
+        pctx.font = `700 ${sz.item}px monospace`; space(2*k);
+        pctx.fillStyle = CONFIG.dim;
+        pctx.fillText(b.y, lx, y + sz.item);
+        pctx.fillStyle = CONFIG.ink;
+        pctx.fillText(b.n, lx + 78*k, y + sz.item);
+        pctx.textAlign = "right";
+        pctx.font = `500 22px monospace`; // Выравниваем правую колонку
+        pctx.fillStyle = CONFIG.accent;
+        pctx.fillText(b.g, lx + innerW, y + sz.item);
+        pctx.strokeStyle = CONFIG.rule; pctx.lineWidth = 1;
+        pctx.beginPath(); pctx.moveTo(lx, y + lh.item - 16*k); pctx.lineTo(lx + innerW, y + lh.item - 16*k); pctx.stroke();
+      } else if (b.t === "kv") {
+        pctx.textAlign = "left";
+        pctx.font = `600 ${sz.kv}px monospace`; space(2*k);
+        pctx.fillStyle = CONFIG.dim;
+        pctx.fillText(b.k, lx, y + sz.kv);
+        pctx.fillStyle = b.href ? CONFIG.accent : CONFIG.ink;
+        pctx.fillText(b.v, lx + 130*k, y + sz.kv);
+        if (b.href)
+          hot.push({ x: lx/W, y: (y-6*k)/H,
+                     w: (130*k + pctx.measureText(b.v).width)/W,
+                     h: (sz.kv+14*k)/H, action: { type: "link", href: b.href } });
+      } else if (b.t === "proj") {
+        let yy = y + sz.projN;
+        pctx.textAlign = "left";
+        pctx.font = `700 ${sz.projN}px monospace`; space(2*k);
+        pctx.fillStyle = CONFIG.ink;
+        pctx.fillText(b.n, lx, yy);
+        if (b.d) {
+          pctx.textAlign = "right";
+          pctx.font = `500 ${sz.projMeta}px monospace`; space(1.5*k);
+          pctx.fillStyle = CONFIG.dim;
+          pctx.fillText(b.d, lx + innerW, yy);
+        }
+        yy += 6*k + sz.projMeta;
+        if (b.tech) {
+          pctx.textAlign = "left";
+          pctx.font = `600 ${sz.projMeta}px monospace`; space(2*k);
+          pctx.fillStyle = CONFIG.accent;
+          pctx.fillText(b.tech, lx, yy);
+        }
+        yy += 10*k;
+        if (b.b) {
+          pctx.textAlign = "left";
+          pctx.font = `400 ${sz.bullet}px monospace`; space(0.5*k);
+          pctx.fillStyle = CONFIG.ink;
+          for (const bullet of b.b) {
+            yy += lh.bullet;
+            pctx.fillText("›  " + bullet, lx + 8*k, yy - 6*k);
+          }
+        }
+      } else if (b.t === "edu") {
+        let yy = y + sz.eduS;
+        pctx.textAlign = "left";
+        pctx.font = `700 ${sz.eduS}px monospace`; space(2*k);
+        pctx.fillStyle = CONFIG.ink;
+        pctx.fillText(b.s, lx, yy);
+        if (b.d) {
+          pctx.textAlign = "right";
+          pctx.font = `500 ${sz.projMeta}px monospace`; space(1.5*k);
+          pctx.fillStyle = CONFIG.dim;
+          pctx.fillText(b.d, lx + innerW, yy);
+        }
+        yy += 6*k + sz.eduDeg;
+        if (b.deg) {
+          pctx.textAlign = "left";
+          pctx.font = `500 ${sz.eduDeg}px monospace`; space(1*k);
+          pctx.fillStyle = CONFIG.ink;
+          pctx.fillText(b.deg, lx, yy);
+        }
+        yy += 6*k + sz.eduFocus;
+        if (b.focus) {
+          pctx.textAlign = "left";
+          pctx.font = `400 ${sz.eduFocus}px monospace`; space(1*k);
+          pctx.fillStyle = CONFIG.dim;
+          pctx.fillText(b.focus, lx, yy);
+        }
+      } else if (b.t === "skills") {
+        pctx.textAlign = "left";
+        pctx.font = `700 ${sz.skillC}px monospace`; space(2.5*k);
+        pctx.fillStyle = CONFIG.dim;
+        pctx.fillText(b.cat, lx, y + sz.skillI);
+        pctx.font = `500 ${sz.skillI}px monospace`; space(1.5*k);
+        pctx.fillStyle = CONFIG.ink;
+        pctx.fillText(b.items, lx + 160*k, y + sz.skillI);
+      } else if (b.t === "bullet") {
+        pctx.textAlign = "left";
+        pctx.font = `400 ${sz.bullet}px monospace`; space(0.5*k);
+        pctx.fillStyle = CONFIG.ink;
+        pctx.fillText("›  " + b.s, lx + 8*k, y + sz.bullet);
+      } else if (b.t === "projShow") {
+        const projects = P.projects || [];
+        const proj = projects[projectIndex] || projects[0];
+        if (proj) {
+          let yy = y;
+          pctx.textAlign = "right";
+          pctx.font = `500 ${22*k}px monospace`; // УВЕЛИЧЕН счетчик
+          space(2*k);
+          pctx.fillStyle = CONFIG.dim;
+          const counter = String(projectIndex+1).padStart(2,'0') + " / " + String(projects.length).padStart(2,'0');
+          pctx.fillText(counter, lx + innerW, yy + 14*k);
+          
+          pctx.fillStyle = CONFIG.accent;
+          pctx.fillRect(lx, yy + 8*k, 5*k, 56*k);
+          
+          yy += 48*k;
+          pctx.textAlign = "left";
+          pctx.font = `900 ${32*k}px monospace`; space(2*k);
+          pctx.fillStyle = CONFIG.ink;
+          pctx.fillText(proj.n, lx + 22*k, yy);
+          
+          yy += 32*k; // Изменен отступ
+          pctx.font = `500 ${22*k}px monospace`; // УВЕЛИЧЕНА дата
+          space(2*k);
+          pctx.fillStyle = CONFIG.dim;
+          pctx.fillText(proj.d, lx + 22*k, yy);
+          
+          yy += 14*k;
+          pctx.strokeStyle = CONFIG.rule; pctx.lineWidth = 1;
+          pctx.beginPath(); pctx.moveTo(lx, yy); pctx.lineTo(lx + innerW, yy); pctx.stroke();
+          
+          yy += 32*k; // Изменен отступ
+          pctx.font = `600 ${22*k}px monospace`; // УВЕЛИЧЕН tech
+          space(2.5*k);
+          pctx.fillStyle = CONFIG.accent;
+          pctx.fillText(proj.tech, lx, yy);
+          
+          yy += 14*k; // Отступ перед буллетами
+          pctx.font = `400 ${22*k}px monospace`; // УВЕЛИЧЕНЫ буллеты
+          space(0.5*k);
+          pctx.fillStyle = CONFIG.ink; // Задаем базовый цвет для всех буллетов
+          const bulletIndent = 26*k;
+          const bulletMaxW = innerW - bulletIndent;
+          
+          for (const bullet of (proj.b || [])) {
+            yy += 32*k;
+            
+            // Ищем ссылку в тексте
+            const urlMatch = bullet.match(/https?:\/\/[^\s]+/);
+            const isLink = !!urlMatch;
+            
+            const lines = wrap(bullet, bulletMaxW);
+            
+            // Отрисовываем первую строку (цвет уже CONFIG.ink)
+            pctx.fillText("›  " + lines[0], lx, yy);
+            
+            // Создаем НЕВИДИМЫЙ кликабельный hitbox поверх текста
+            if (isLink) {
+              const startY = yy - 22*k;
+              const hitHeight = (lines.length * 28*k) + 12*k;
+              hot.push({
+                x: (lx - 10*k) / W, 
+                y: startY / H,
+                w: innerW / W, 
+                h: hitHeight / H,
+                action: { type: "link", href: urlMatch[0] }
+              });
+            }
+
+            // Отрисовываем остальные строки, если был перенос
+            for (let li = 1; li < lines.length; li++) {
+              yy += 28*k;
+              pctx.fillText("    " + lines[li], lx, yy);
+            }
+            yy += 12*k;
+          }
+          
+          yy += 26*k;
+          const dotSize = 10*k;
+          const dotGap = 16*k;
+          const dotsW = projects.length * dotSize + (projects.length-1) * dotGap;
+          let dotX = lx + (innerW - dotsW) / 2;
+          for (let pi = 0; pi < projects.length; pi++) {
+            pctx.fillStyle = (pi === projectIndex) ? CONFIG.accent : CONFIG.dim;
+            pctx.fillRect(dotX, yy, dotSize, dotSize);
+            hot.push({
+              x: (dotX - 8*k) / W, y: (yy - 8*k) / H,
+              w: (dotSize + 16*k) / W, h: (dotSize + 16*k) / H,
+              action: { type: "proj", index: pi },
+            });
+            dotX += dotSize + dotGap;
+          }
+          
+          yy += 32*k;
+          pctx.font = `700 ${22*k}px monospace`; // УВЕЛИЧЕНЫ стрелки
+          space(3*k);
+          pctx.fillStyle = CONFIG.accent;
+          
+          pctx.textAlign = "left";
+          const prevTxt = "‹  PREV";
+          pctx.fillText(prevTxt, lx, yy);
+          const prevW = pctx.measureText(prevTxt).width;
+          hot.push({
+            x: (lx - 12*k) / W, y: (yy - 32*k) / H,
+            w: (prevW + 24*k) / W, h: 48*k / H,
+            action: { type: "projDelta", delta: -1 },
+          });
+          
+          pctx.textAlign = "right";
+          const nextTxt = "NEXT  ›";
+          pctx.fillText(nextTxt, lx + innerW, yy);
+          const nextW = pctx.measureText(nextTxt).width;
+          hot.push({
+            x: (lx + innerW - nextW - 12*k) / W, y: (yy - 32*k) / H,
+            w: (nextW + 24*k) / W, h: 48*k / H,
+            action: { type: "projDelta", delta: +1 },
+          });
+        }
+      }
+      y += h;
+    });
+
+    pctx._crtMode = "relief";
+    pctx.font = `600 ${22*k}px monospace`; // НАВИГАЦИЯ в 22px
+    space(3*k);
+    const gap = 32*k;
+    const widths = NAV.map(n => pctx.measureText(n).width + 24*k);
+    const navW = widths.reduce((a, b) => a + b, 0) + gap*(NAV.length-1);
+    let nx = cx - navW/2;
+    const ny = H * 0.86;
+    NAV.forEach((n, i) => {
+      const active = n === name;
+      pctx.textAlign = "center";
+      pctx.fillStyle = active ? CONFIG.accent : CONFIG.dim;
+      pctx.fillText(active ? "[ "+n+" ]" : n, nx + widths[i]/2, ny);
+      hot.push({ x: (nx-6*k)/W, y: (ny-22*k)/H,
+                 w: (widths[i]+12*k)/W, h: 40*k/H,
+                 action: { type: "nav", page: n } });
+      nx += widths[i] + gap;
+    });
+
+    gl.activeTexture(gl.TEXTURE0);
+    gl.bindTexture(gl.TEXTURE_2D, tex);
+    gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, page);
+
+    gl.activeTexture(gl.TEXTURE1);
+    gl.bindTexture(gl.TEXTURE_2D, tex2);
+    gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, page2);
+
+    gl.activeTexture(gl.TEXTURE0);
+  }
+
+  function curve(x, y) {
+    let ux = x*2-1, uy = y*2-1;
+    const ox = Math.abs(uy)/(CURVE*1.6), oy = Math.abs(ux)/(CURVE*1.4);
+    ux += ux*ox*ox; uy += uy*oy*oy;
+    return [ux*0.5+0.5, uy*0.5+0.5];
+  }
+  
+  function hitAt(clientX, clientY) {
+    const sx = (clientX/W - 0.5)*FRAME + 0.5;
+    const sy = (clientY/H - 0.5)*FRAME + 0.5;
+    const [px, py] = curve(sx, sy);
+    if (px < 0 || px > 1 || py < 0 || py > 1) return null;
+    for (const r of hot)
+      if (px >= r.x && px <= r.x+r.w && py >= r.y && py <= r.y+r.h) return r;
+    return null;
+  }
+
+  let current = "HOME";
+  let mode = "boot";
+  let modeStart = performance.now();
+  let transTo = null, transSwapped = false;
+  let projectIndex = 0;
+  let mouseX = -9999, mouseY = -9999;
+  let mouseInside = false;
+  let asciiActive = false;
+
+  let asciiCells = null;
+  function randScrambleChar() {
+    return SCRAMBLE_CHARS[Math.floor(Math.random() * SCRAMBLE_CHARS.length)];
+  }
+  function buildAsciiCells() {
+    asciiCells = [];
+    const now = performance.now();
+    for (let r = 0; r < ASCII_FORTHOSV.length; r++) {
+      const line = ASCII_FORTHOSV[r];
+      for (let c = 0; c < line.length; c++) {
+        if (line[c] !== " ") {
+          asciiCells.push({
+            row: r,
+            col: c,
+            ch: randScrambleChar(),
+            rollAt: now + Math.random() * CONFIG.asciiRollMax,
+            hotUntil: 0,
+          });
+        }
+      }
+    }
+  }
+
+  function go(name) {
+    if (mode !== "idle" || name === current) return;
+    mode = "trans"; modeStart = performance.now();
+    transTo = name; transSwapped = false;
+  }
+
+  gl_canvas.addEventListener("click", e => {
+    if (mode !== "idle") return;
+    const r = hitAt(e.clientX, e.clientY);
+    if (!r) return;
+    if (r.action.type === "nav") go(r.action.page);
+    else if (r.action.type === "link") window.open(r.action.href, "_blank", "noopener");
+    else if (r.action.type === "proj") { projectIndex = r.action.index; renderPage(current); }
+    else if (r.action.type === "projDelta") {
+      const n = PAGES.WORK.projects.length;
+      projectIndex = (projectIndex + r.action.delta + n) % n;
+      renderPage(current);
+    }
+  });
+  
+  gl_canvas.addEventListener("mousemove", e => {
+    gl_canvas.style.cursor = (mode === "idle" && hitAt(e.clientX, e.clientY)) ? "pointer" : "default";
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    mouseInside = true;
+  });
+  
+  gl_canvas.addEventListener("mouseleave", () => {
+    mouseInside = false;
+    mouseX = mouseY = -9999;
+    if (asciiActive && mode === "idle") renderPage(current);
+  });
+  
+  addEventListener("keydown", e => {
+    const i = "1234".indexOf(e.key);
+    if (i >= 0) { go(NAV[i]); return; }
+    if (e.key === "Escape") { go("HOME"); return; }
+    if (current === "WORK" && mode === "idle" && PAGES.WORK.projects) {
+      const n = PAGES.WORK.projects.length;
+      if (e.key === "ArrowRight" || e.key === "ArrowDown") {
+        projectIndex = (projectIndex + 1) % n;
+        renderPage(current);
+        e.preventDefault();
+      } else if (e.key === "ArrowLeft" || e.key === "ArrowUp") {
+        projectIndex = (projectIndex - 1 + n) % n;
+        renderPage(current);
+        e.preventDefault();
+      }
+    }
+  });
+
+  function resize() {
+    dpr = Math.min(devicePixelRatio || 1, 2);
+    W = innerWidth; H = innerHeight;
+    gl_canvas.width  = page.width  = page2.width  = Math.round(W*dpr);
+    gl_canvas.height = page.height = page2.height = Math.round(H*dpr);
+    gl.viewport(0, 0, gl_canvas.width, gl_canvas.height);
+    gl.uniform2f(U.res, gl_canvas.width, gl_canvas.height);
+    renderPage(current);
+  }
+  let rt = 0;
+  addEventListener("resize", () => { clearTimeout(rt); rt = setTimeout(resize, 120); });
+  resize();
+  gl_canvas.classList.add("live");
+
+  const ease = t => t<0 ? 0 : t>1 ? 1 : t*t*(3-2*t);
+  let running = true;
+  document.addEventListener("visibilitychange", () => { running = !document.hidden; if (running) loop(performance.now()); });
+
+  let lastAsciiRender = 0;
+  function loop(now) {
+    if (!running) return;
+    const t = now / 1000;
+    let noise = 0, power = 1;
+    const el = now - modeStart;
+
+    if (mode === "idle" && current === "HOME") {
+      const interval = 1000 / CONFIG.asciiScrambleHz;
+      if (now - lastAsciiRender > interval) {
+        lastAsciiRender = now;
+        renderPage(current);
+      }
+    }
+
+    if (mode === "boot") {
+      power = ease(el / 280);
+      if (el < 950)                noise = 1;
+      else if (el < CONFIG.bootMs) noise = 1 - ease((el-950)/(CONFIG.bootMs-950));
+      else mode = "idle";
+    } else if (mode === "trans") {
+      const half = CONFIG.transMs / 2;
+      if (el < half) noise = ease(el/half) * 0.9;
+      else {
+        if (!transSwapped) { current = transTo; renderPage(current); transSwapped = true; }
+        noise = (1 - ease((el-half)/half)) * 0.9;
+        if (el >= CONFIG.transMs) { mode = "idle"; transTo = null; }
+      }
+    }
+
+    gl.uniform1f(U.time,  t);
+    gl.uniform1f(U.noise, noise);
+    gl.uniform1f(U.power, power);
+    gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+    requestAnimationFrame(loop);
+  }
+  requestAnimationFrame(loop);
+}
+</script>
+</body>
+</html>
