@@ -154,17 +154,11 @@ const CONFIG = {
   grain:        0.240,  
   maskStrength: 2.72,   
   
-  // ==========================================
-  // ГРУППА 1: CRT
-  // ==========================================
   maskCell:     4.5,    
   scanDepth:    0.88,   
   gain:         1.48,   
   
-  // ==========================================
-  // ГРУППА 2: RELIEF (UI)
-  // ==========================================
-  smallTextRelief:  1.0,   // 1.0 = включить мод
+  smallTextRelief:  1.0, 
   reliefMaskCell:   5.5,  
   reliefScanDepth:  0.68, 
   reliefGain:       1.0,  
@@ -173,14 +167,13 @@ const CONFIG = {
   
   debugRelief:      false, 
   
-  // ----- ASCII MARK -----
   asciiSize:        18,    
   asciiHoverRadius: 25,   
   asciiScrambleHz:  10,    
   asciiHoverHold:   500,   
   asciiRollMin:     2000,  
   asciiRollMax:     5000,  
-  // ----- BG LOGO -----
+  
   bgLogoEnabled:    false,
   bgLogoSize:       18,    
   bgLogoColor:      "#c41e3a",  
@@ -680,7 +673,7 @@ function startCRT(gl) {
         pctx.fillStyle = CONFIG.ink;
         pctx.fillText(b.n, lx + 78*k, y + sz.item);
         pctx.textAlign = "right";
-        pctx.font = `500 22px monospace`; // Выравниваем правую колонку
+        pctx.font = `500 22px monospace`;
         pctx.fillStyle = CONFIG.accent;
         pctx.fillText(b.g, lx + innerW, y + sz.item);
         pctx.strokeStyle = CONFIG.rule; pctx.lineWidth = 1;
@@ -770,7 +763,7 @@ function startCRT(gl) {
         if (proj) {
           let yy = y;
           pctx.textAlign = "right";
-          pctx.font = `500 ${22*k}px monospace`; // УВЕЛИЧЕН счетчик
+          pctx.font = `500 ${22*k}px monospace`; 
           space(2*k);
           pctx.fillStyle = CONFIG.dim;
           const counter = String(projectIndex+1).padStart(2,'0') + " / " + String(projects.length).padStart(2,'0');
@@ -785,8 +778,8 @@ function startCRT(gl) {
           pctx.fillStyle = CONFIG.ink;
           pctx.fillText(proj.n, lx + 22*k, yy);
           
-          yy += 32*k; // Изменен отступ
-          pctx.font = `500 ${22*k}px monospace`; // УВЕЛИЧЕНА дата
+          yy += 32*k; 
+          pctx.font = `500 ${22*k}px monospace`; 
           space(2*k);
           pctx.fillStyle = CONFIG.dim;
           pctx.fillText(proj.d, lx + 22*k, yy);
@@ -795,32 +788,29 @@ function startCRT(gl) {
           pctx.strokeStyle = CONFIG.rule; pctx.lineWidth = 1;
           pctx.beginPath(); pctx.moveTo(lx, yy); pctx.lineTo(lx + innerW, yy); pctx.stroke();
           
-          yy += 32*k; // Изменен отступ
-          pctx.font = `600 ${22*k}px monospace`; // УВЕЛИЧЕН tech
+          yy += 32*k; 
+          pctx.font = `600 ${22*k}px monospace`; 
           space(2.5*k);
           pctx.fillStyle = CONFIG.accent;
           pctx.fillText(proj.tech, lx, yy);
           
-          yy += 14*k; // Отступ перед буллетами
-          pctx.font = `400 ${22*k}px monospace`; // УВЕЛИЧЕНЫ буллеты
+          yy += 14*k; 
+          pctx.font = `400 ${22*k}px monospace`; 
           space(0.5*k);
-          pctx.fillStyle = CONFIG.ink; // Задаем базовый цвет для всех буллетов
+          pctx.fillStyle = CONFIG.ink; 
           const bulletIndent = 26*k;
           const bulletMaxW = innerW - bulletIndent;
           
           for (const bullet of (proj.b || [])) {
             yy += 32*k;
             
-            // Ищем ссылку в тексте
             const urlMatch = bullet.match(/https?:\/\/[^\s]+/);
             const isLink = !!urlMatch;
             
             const lines = wrap(bullet, bulletMaxW);
             
-            // Отрисовываем первую строку (цвет уже CONFIG.ink)
             pctx.fillText("›  " + lines[0], lx, yy);
             
-            // Создаем НЕВИДИМЫЙ кликабельный hitbox поверх текста
             if (isLink) {
               const startY = yy - 22*k;
               const hitHeight = (lines.length * 28*k) + 12*k;
@@ -833,7 +823,6 @@ function startCRT(gl) {
               });
             }
 
-            // Отрисовываем остальные строки, если был перенос
             for (let li = 1; li < lines.length; li++) {
               yy += 28*k;
               pctx.fillText("    " + lines[li], lx, yy);
@@ -858,36 +847,38 @@ function startCRT(gl) {
           }
           
           yy += 32*k;
-          pctx.font = `700 ${22*k}px monospace`; // УВЕЛИЧЕНЫ стрелки
+          pctx.font = `700 ${22*k}px monospace`; 
           space(3*k);
           pctx.fillStyle = CONFIG.accent;
           
-          pctx.textAlign = "left";
-          const prevTxt = "‹  PREV";
-          pctx.fillText(prevTxt, lx, yy);
-          const prevW = pctx.measureText(prevTxt).width;
-          hot.push({
-            x: (lx - 12*k) / W, y: (yy - 32*k) / H,
-            w: (prevW + 24*k) / W, h: 48*k / H,
-            action: { type: "projDelta", delta: -1 },
-          });
-          
-          pctx.textAlign = "right";
-          const nextTxt = "NEXT  ›";
-          pctx.fillText(nextTxt, lx + innerW, yy);
-          const nextW = pctx.measureText(nextTxt).width;
-          hot.push({
-            x: (lx + innerW - nextW - 12*k) / W, y: (yy - 32*k) / H,
-            w: (nextW + 24*k) / W, h: 48*k / H,
-            action: { type: "projDelta", delta: +1 },
-          });
+          // PREV
+        pctx.textAlign = "left";
+        const prevTxt = "‹  PREV";
+        pctx.fillText(prevTxt, lx, yy);
+        const prevW = pctx.measureText(prevTxt).width;
+        hot.push({
+          x: (lx - 24*k) / W, y: (yy - 48*k) / H,
+          w: (prevW + 48*k) / W, h: 96*k / H, 
+          action: { type: "projDelta", delta: -1 },
+        });
+
+        // NEXT
+        pctx.textAlign = "right";
+        const nextTxt = "NEXT  ›";
+        pctx.fillText(nextTxt, lx + innerW, yy);
+        const nextW = pctx.measureText(nextTxt).width;
+        hot.push({
+          x: (lx + innerW - nextW - 24*k) / W, y: (yy - 48*k) / H,
+          w: (nextW + 48*k) / W, h: 96*k / H,
+          action: { type: "projDelta", delta: +1 },
+        });
         }
       }
       y += h;
     });
 
     pctx._crtMode = "relief";
-    pctx.font = `600 ${22*k}px monospace`; // НАВИГАЦИЯ в 22px
+    pctx.font = `600 ${22*k}px monospace`; 
     space(3*k);
     const gap = 32*k;
     const widths = NAV.map(n => pctx.measureText(n).width + 24*k);
