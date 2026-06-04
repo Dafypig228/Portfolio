@@ -131,8 +131,8 @@ Target: 60 fps on integrated graphics. Texture size is clamped to `min(devicePix
 **Adil Abdildenov** — Creative Developer, Astana, Kazakhstan.
 
 - Lead Programmer, FIRST Tech Challenge Team xCeption (3rd Place Think Award, FTC World Championship 2026, Houston)
-- Builder of [DAVOS](https://github.com/Dafypig228) — a local-memory AI companion
-- Builder of [B.R.E.D](https://www.youtube.com/watch?v=MEZYe6K1hnI) — a text-rendered horror engine in C++/Godot
+- Builder of [DAVOS](https://github.com/Dafypig228/Fflux) — a local-memory AI companion
+- Builder of [B.R.E.D](https://github.com/Dafypig228/B.R.E.D) [Preview](https://www.youtube.com/watch?v=MEZYe6K1hnI) — a text-rendered horror engine in C++/Godot
 
 Reach me:
 - Email — adil.abdilden2010@gmail.com
